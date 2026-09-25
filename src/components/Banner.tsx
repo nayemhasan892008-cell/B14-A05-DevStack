@@ -6,9 +6,9 @@ const Banner = () => {
     <section className='my-6 container mx-auto'>
       <div className='flex items-center justify-between'>
       <div>
-        <h1 className='font-extrabold text-6xl text-[#0F172A] '>Build Your Ideal  <span className='font-extrabold text-6xl bg-linear-to-r from-[#FF5722] via-[#D81B7E] to-[#7C3AED] bg-clip-text text-transparent '>Development Stack</span> </h1>
-        <p className='font-normal text-[#475569] text-lg my-10'>Explore frontend, backend, database, and tooling options,
-       compare them side by side, and put together the stack that fits your
+        <h1 className='font-extrabold text-6xl text-[#0F172A] '>Build Your Ideal <br />  <span className='font-extrabold text-6xl bg-linear-to-r from-[#FF5722] via-[#D81B7E] to-[#7C3AED] bg-clip-text text-transparent '>Development Stack</span> </h1>
+        <p className='font-normal text-[#475569] text-lg my-10'>Explore frontend, backend, database, and tooling options,<br />
+       compare them side by side, and put together the stack that fits your <br />
        next project.</p>
 
         <div className='flex items-center gap-3 my-10'>
