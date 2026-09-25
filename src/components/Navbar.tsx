@@ -9,10 +9,7 @@ const Navbar = () => {
 
    <div className='flex justify-between items-center gap-3'>
        <img src={logo} alt="" />
-    <div className='flex items-center justify-center gap-0.5'>
-      <h1 className='font-bold text-xl text-[#0F172A]'>Dev</h1>
-      <h1 className='font-bold text-xl text-[#DB2777]'>Stack</h1>
-    </div>
+    
    </div>
 
   

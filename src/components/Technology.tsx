@@ -54,22 +54,19 @@ const Technology = ({TechnologyPromise}:ITechnologyProps) => {
     <section>
       <div className="container mx-auto my-10">
 
-      
         <div>
-           <h2>Explore the <span className="text-pink-500">Technologies</span></h2>
-           <p className="my-1 text-sm text-[#64748B]"> Pick one technology per category to build your ideal stack.</p>
+           <h2 className="font-extrabold text-4xl">Explore the <span className=" bg-linear-to-r from-[#EC4899] to-[#8B5CF6] bg-clip-text text-transparent">Technologies</span></h2>
+           <p className="my-1 text-lg text-[#64748B]"> Pick one technology per category to build your ideal stack.</p>
         </div>
 
-             
-         <div className="grid grid-cols-12 gap-6 my-2">
-           <div className="col-span-9 grid grid-cols-3 gap-4">
+         <div className="grid grid-cols-12 gap-6 my-2 items-start ">
+            <div className="col-span-9 grid grid-cols-3  gap-4 ">
              {Technologies.map((technology:ITechnology) => (
                <TechnologyCard  key={technology.id} technology={technology}  handleAddStack={handleAddStack} stack={stack}  />))}
-           </div>
+            </div>
 
-
-             <div className="col-span-3">
-               <YourStack     stack={stack}   handleRemove={handleRemove}   handleRemoveAll={handleRemoveAll}  />
+              <div className="col-span-3">
+               <YourStack stack={stack} handleRemove={handleRemove} handleRemoveAll={handleRemoveAll}  />
               </div>
           </div>
          

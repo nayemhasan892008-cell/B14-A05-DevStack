@@ -1,4 +1,5 @@
 import type { ITechnology } from "../types/technology";
+import { FaStar } from "react-icons/fa";
 
 interface ITechnologyCardProps {
   technology: ITechnology;
@@ -33,25 +34,26 @@ const TechnologyCard = ({
         </span>
       </div>
 
-      <h3 className="mt-4 text-lg font-semibold">
+      <h3 className="mt-4 text-lg font-bold">
         {technology.name}
       </h3>
 
-      <p className="mt-2 text-sm text-gray-500">
+      <p className="mt-2 text-xs font-normal text-[#64748B]">
         {technology.description}
       </p>
 
       <div className="mt-4 flex items-center justify-between border-t border-gray-100 pt-3">
-        <span className="rounded-md bg-gray-100 px-2 py-1 text-xs text-gray-500">
+        <span className="rounded-md bg-gray-100 px-2 py-1 text-xs font-medium text-gray-500">
           {technology.category}
         </span>
 
-        <span className="text-xs text-gray-500">
+        <span className="text-xs text-[#64748B] font-medium">
           {technology.difficulty}
         </span>
 
-        <span className="text-xs text-gray-500">
-          ⭐ {technology.rating}
+        <span className="flex items-center gap-1 text-xs text-gray-500">
+        <FaStar className="text-yellow-400" />
+        {technology.rating}
         </span>
       </div>
 
