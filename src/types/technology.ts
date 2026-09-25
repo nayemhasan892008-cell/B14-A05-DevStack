@@ -1,4 +1,4 @@
-export interface ITechnology {
+export interface ITechnology{
    "id": string,
     "name": string,
     "category":string ,
@@ -7,5 +7,5 @@ export interface ITechnology {
     "rating":string,
     "difficulty": string,
     "badge":string
-   " logo":
+   
 }

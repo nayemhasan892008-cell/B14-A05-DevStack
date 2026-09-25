@@ -9,26 +9,20 @@ import { toast } from "react-toastify";
  }
 
 
-const Technology = ({TechnologyPromise}:ITechnologyProps) => {
+ const Technology = ({TechnologyPromise}:ITechnologyProps) => {
   const Technologies = use(TechnologyPromise);
     const [stack, setStack] = useState<ITechnology[]>([]);
-
    const handleAddStack = (item: ITechnology) => {
-
-  const alreadyExists = stack.filter(
-    (el) => el.id === item.id
-  );
-
-  if (alreadyExists.length > 0) {
+   const alreadyExists = stack.filter((el) => el.id === item.id  );
+    
+   if (alreadyExists.length > 0) {
     toast.warning("Technology already added...");
     return;
-  }
+   }
 
-  const updatedStack = [...stack, item];
-
-  setStack(updatedStack);
-
-  toast.success("Technology added successfully...");
+   const updatedStack = [...stack, item];
+   setStack(updatedStack);
+   toast.success("Technology added successfully...");
 };
 
 
@@ -41,14 +35,11 @@ const Technology = ({TechnologyPromise}:ITechnologyProps) => {
     toast.success("Technology removed successfully...");
     };
 
-
     const handleRemoveAll = () => {
     setStack([]);
 
     toast.success("All technologies removed...");
    };
-
-
 
   return (
     <section>
@@ -69,13 +60,9 @@ const Technology = ({TechnologyPromise}:ITechnologyProps) => {
                <YourStack stack={stack} handleRemove={handleRemove} handleRemoveAll={handleRemoveAll}  />
               </div>
           </div>
-         
 
       </div>
     </section>
-
-    
-    
   );
 };
 

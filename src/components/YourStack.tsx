@@ -6,11 +6,8 @@ interface IYourStackProps {
   handleRemoveAll: () => void;
 }
 
-const YourStack = ({
-  stack,
-  handleRemove,
-  handleRemoveAll,
-}: IYourStackProps) => {
+  const YourStack = ({stack,handleRemove,handleRemoveAll,}:IYourStackProps) => {
+  
     return (
     <div className="rounded-xl border border-gray-200 bg-white p-5 mt-8">
       <h2 className="text-xl font-bold">
@@ -23,11 +20,9 @@ const YourStack = ({
 
       {stack.length === 0 && (
         <div className="mt-5 rounded-lg border border-dashed border-gray-200 p-8 text-center">
-          <p className="text-sm text-gray-400">
-            Your stack is empty.
-          </p>
+          <p className="text-sm text-gray-400"> Your stack is empty. </p>
         </div>
-      )}
+       )}
 
         <div className="mt-5 space-y-2">
         {stack.map((technology) => (

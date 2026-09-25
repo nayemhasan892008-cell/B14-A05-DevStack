@@ -1,75 +1,35 @@
-# React + TypeScript + Vite
+Project Name: DevStack
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+description: A React-based technology stack builder where users can explore technologies and create their own stack.
 
-Currently, two official plugins are available:
+Technologies:
+1.React
+2.TypeScript
+3.Tailwind CSS
+4.React Toastify
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Features:
+1.Browse different technologies
+2.Add and remove technologies from your stack
+3.Remove all selected technologies at once
 
-## React Compiler
+1. What is JSX?
+   JSX lets us write HTML-like code inside JavaScript to create React UI.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+2. Props vs State
+   Props pass data from parent to child. State stores changing data inside a component.
 
-## Expanding the ESLint configuration
+3. What does useState do?
+   It manages changing data. I used it to store selected technologies.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+4. What does useEffect do?
+   It handles side effects like data fetching. I didn't use it; I used use() with Suspense.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+5. Why use key in .map()?
+   key helps React identify each list item.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
-```
-
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
-```
+6. What is conditional rendering?
+   Showing UI based on a condition.
+   //{stack.length === 0 && <p>Your stack is empty.</p>}//
+7. How does parent-child data passing work?
+   The parent passes data through props. The child can send data back by calling a function received through props.

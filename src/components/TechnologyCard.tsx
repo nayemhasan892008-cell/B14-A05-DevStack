@@ -26,12 +26,11 @@ const TechnologyCard = ({
         <img
           src={technology.icon}
           alt={technology.name}
-          className="h-12 w-12 object-contain"
-        />
+          className="h-12 w-12 object-contain" />
 
-        <span className="rounded-full border border-blue-100 bg-blue-50 px-4 py-2 text-sm font-medium text-blue-600">
+         <span className="rounded-full border border-blue-100 bg-blue-50 px-4 py-2 text-sm font-medium text-blue-600">
           {technology.badge}
-        </span>
+         </span>
       </div>
 
       <h3 className="mt-4 text-lg font-bold">
@@ -51,19 +50,15 @@ const TechnologyCard = ({
           {technology.difficulty}
         </span>
 
-        <span className="flex items-center gap-1 text-xs text-gray-500">
-        <FaStar className="text-yellow-400" />
-        {technology.rating}
-        </span>
+        <span className="flex items-center gap-1 text-xs text-gray-500">  <FaStar className="text-yellow-400" />{technology.rating}  </span>
       </div>
 
-      <button
+         <button
         onClick={handleSelect}
         disabled={isSelected}
-        className="mt-4 w-full rounded-lg bg-black py-2 text-sm text-white disabled:cursor-not-allowed disabled:opacity-50"
-      >
-        {isSelected ? "Added to Stack" : "Add to Stack"}
-      </button>
+        className="mt-4 w-full rounded-lg bg-black py-2 text-sm text-white disabled:cursor-not-allowed disabled:opacity-50"   >
+            {isSelected ? "Added to Stack" : "Add to Stack"}
+          </button>
     </div>
   );
 };
