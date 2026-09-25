@@ -5,8 +5,8 @@ const Footer = () => {
   return (
     <footer className='border-t border-gray-200 my-6'>
        
-       {/* <div className='my-20'> */}
-      <div className='flex justify-between items-center container mx-auto border-b border-gray-200 py-20'>
+       
+      <div className='flex justify-between items-start container mx-auto border-b border-gray-200 py-20'>
 
         <div className='space-y-5'>
           <img src={devlogo} alt="" />
@@ -47,7 +47,7 @@ const Footer = () => {
           </ul>
         </div>
 
-      {/* </div> */}
+      
       </div>
 
       <div className='flex items-center justify-between container mx-auto pt-7 pb-10'>

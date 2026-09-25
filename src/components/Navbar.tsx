@@ -1,13 +1,14 @@
 import React from 'react';
+import logo from '../assets/logo-text.png'
 
 const Navbar = () => {
   return (
-    <nav className='py-7 border-b border-gray-200'>
+    <nav className='py-7 border-b border-gray-200 sticky top-0 bg-[#FFFFFF]'>
 
       <div className='flex justify-between items-center container mx-auto '>
 
    <div className='flex justify-between items-center gap-3'>
-    <div className='bg-linear-to-tr from-[#EC4899] to-[#7C3AED]  rounded-lg font-bold text-[#FFFFFF] text-sm flex  items-center justify-center w-10 h-10'>DS</div>
+       <img src={logo} alt="" />
     <div className='flex items-center justify-center gap-0.5'>
       <h1 className='font-bold text-xl text-[#0F172A]'>Dev</h1>
       <h1 className='font-bold text-xl text-[#DB2777]'>Stack</h1>
